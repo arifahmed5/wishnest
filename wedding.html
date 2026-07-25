@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wedding Wishes - WishNest</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">💍 WishNest Wedding</div>
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+</nav>
+
+</header>
+
+
+
+<section class="birthday-section">
+
+
+<h2>💍 Wedding Wishes Collection ❤️</h2>
+
+
+<div class="wish-container">
+
+
+
+<div class="wish-card">
+
+<h3>❤️ Beautiful Wedding Wish</h3>
+
+<p>
+Congratulations on your wedding 💍✨<br>
+May your life be filled with love,
+happiness and endless beautiful memories ❤️
+</p>
+
+<button onclick="copyWish(this)">
+📋 Copy
+</button>
+
+</div>
+
+
+
+
+<div class="wish-card">
+
+<h3>💖 Emotional Wedding Wish</h3>
+
+<p>
+May your marriage be blessed with love,
+peace and happiness forever ❤️✨
+</p>
+
+<button onclick="copyWish(this)">
+📋 Copy
+</button>
+
+</div>
+
+
+
+
+<div class="wish-card">
+
+<h3>🎉 Wedding Mubarak</h3>
+
+<p>
+Wedding Mubarak 💍🎊<br>
+May Allah bless your new journey
+with lots of happiness and success 🤲❤️
+</p>
+
+<button onclick="copyWish(this)">
+📋 Copy
+</button>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- 🎵 Naat Music -->
+
+
+<section class="birthday-section">
+
+
+<h2>🎵 Wedding Wishes</h2>
+
+
+<audio id="weddingMusic" autoplay loop>
+
+<source src="music/wedding.mp3" type="audio/mpeg">
+
+</audio>
+
+
+<button id="naatBtn">
+
+🎵 Play
+
+</button>
+
+
+</section>
+
+
+
+<script>
+
+
+function copyWish(button){
+
+let text = button.parentElement.querySelector("p").innerText;
+
+navigator.clipboard.writeText(text);
+
+button.innerHTML="✅ Copied!";
+
+
+setTimeout(()=>{
+
+button.innerHTML="📋 Copy";
+
+},2000);
+
+}
+
+
+
+
+const naat = document.getElementById("weddingMusic");
+
+const btn = document.getElementById("naatBtn");
+
+
+btn.onclick = function(){
+
+
+if(naat.paused){
+
+naat.play();
+
+btn.innerHTML="⏸ Pause Naat";
+
+}
+
+else{
+
+naat.pause();
+
+btn.innerHTML="🎵 Play Naat";
+
+}
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

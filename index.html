@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WishNest - Where Every Wish Comes Alive</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="stars">
+<span>⭐</span>
+<span>✨</span>
+<span>⭐</span>
+<span>✨</span>
+<span>⭐</span>
+<span>✨</span>
+</div>
+
+
+<div class="balloon red" style="left:5%;animation-duration:10s;"></div>
+<div class="balloon blue" style="left:25%;animation-duration:13s;"></div>
+<div class="balloon yellow" style="left:45%;animation-duration:11s;"></div>
+<div class="balloon green" style="left:65%;animation-duration:15s;"></div>
+<div class="balloon pink" style="left:85%;animation-duration:12s;"></div>
+
+
+<div class="animals">
+<div class="butterfly">🦋</div>
+<div class="bird">🐦</div>
+<div class="rabbit">🐇</div>
+</div>
+
+
+<div id="fireworks"></div>
+
+
+
+<header>
+
+<div class="logo">🎉 WishNest</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#birthday">Birthday</a>
+<a href="wedding.html">💍 Wedding</a>
+<a href="#funny">Funny</a>
+<a href="#games">Games</a>
+<a href="#festival">Festival</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+
+
+
+<section class="hero">
+
+<h1>
+🎂 Create, Play, Laugh & Celebrate 🎮
+</h1>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WishNest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <p>
+        Welcome to <b>WishNest</b> ❤️<br>
+        Birthday Wishes • Funny Wishes • Festival Wishes • Offline Games • Music & Entertainment
+    </p>
+
+  <!-- Hero Section -->
+    <div class="hero-content">
+    <h1>Welcome to WishNest ❤️</h1>
+    <p>Birthday Wishes • Funny Wishes • Festival Wishes • Offline Games • Music & Entertainment</p>
+    <button id="startBtn">🚀 Start Exploring</button>
+</div>
+
+    <!-- Background Audio -->
+   <!-- Background Audio Tag -->
+    <audio id="weddingMusic" loop>
+        <source src="music/wedding.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Sound Button -->
+    <button id="soundBtn" type="button">🔊</button>
+
+</body>
+</html>
+
+
+
+</section>
+
+
+<!-- 🎂 Birthday Section -->
+
+<section class="birthday-section" id="birthday">
+
+<h2>🎂 Birthday Wishes Collection 🎉</h2>
+
+<div class="wish-container">
+
+
+<div class="wish-card">
+
+<h3>❤️ Sweet Wish</h3>
+
+<p>
+Happy Birthday 🎂<br>
+May your day be filled with happiness,
+love and endless smiles 😊
+</p>
+
+<button onclick="copyWish(this)">
+📋 Copy
+</button>
+
+</div>
+
+
+
+<div class="wish-card">
+
+<h3>💖 Emotional Wish</h3>
+
+<p>
+Wishing you a beautiful birthday ❤️<br>
+May all your dreams come true
+and happiness always stay with you ✨
+</p>
+
+<button onclick="copyWish(this)">
+📋 Copy
+</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- 😂 Funny Section -->
+
+<section class="birthday-section" id="funny">
+
+<h2>😂 Funny Wishes Collection 🤣</h2>
+
+<div class="wish-container">
+
+
+<div class="wish-card">
+
+<h3>🤣 Age Problem</h3>
+
+<p>
+Happy Birthday 😂🎉<br>
+Age is just a number...<br>
+but your cake price keeps increasing 🎂🤣
+</p>
+
+<button onclick="copyWish(this)">
+📋 Copy
+</button>
+
+</div>
+
+
+
+
+<div class="wish-card">
+
+<h3>😂 Old But Gold</h3>
+
+<p>
+Happy Birthday 🎂😂<br>
+Don't worry about getting older...<br>
+You are still young at heart ❤️🤣
+</p>
+
+<button onclick="copyWish(this)">
+📋 Copy
+</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<!-- 🎮 Games Section -->
+
+<section class="birthday-section" id="games">
+
+<h2>🎮 Offline Mini Games 🕹️</h2>
+
+<div class="wish-container">
+
+
+<div class="wish-card">
+
+<h3>🎯 Guess Number</h3>
+
+<p>
+1 se 10 ke beech number guess karo
+</p>
+
+<input id="guessInput"
+type="number"
+placeholder="Enter number">
+
+<br><br>
+
+<button onclick="guessGame()">
+Play 🎯
+</button>
+
+<p id="guessResult"></p>
+
+</div>
+
+
+
+
+
+<div class="wish-card">
+
+<h3>🖱️ Click Challenge</h3>
+
+<p>
+10 seconds mein kitne clicks?
+</p>
+
+<h2 id="score">0</h2>
+
+<button onclick="clickGame()">
+Click Me 😄
+</button>
+
+<p id="clickResult"></p>
+
+</div>
+
+
+
+
+
+<div class="wish-card">
+
+<h3>✂️ Rock Paper Scissors</h3>
+
+<button onclick="rps('Rock')">
+🪨 Rock
+</button>
+
+<button onclick="rps('Paper')">
+📄 Paper
+</button>
+
+<button onclick="rps('Scissors')">
+✂️ Scissors
+</button>
+
+<p id="rpsResult"></p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- 🪔 Festival Section -->
+
+<section class="birthday-section" id="festival">
+
+<h2>🪔 Festival Wishes Collection 🎉</h2>
+
+<div class="wish-container">
+
+
+<div class="wish-card">
+
+<h3>🪔 Diwali Wishes</h3>
+
+<p>
+Happy Diwali 🪔✨<br>
+May your life shine like diyas
+and your home be filled with happiness ❤️
+</p>
+
+<button onclick="copyWish(this)">
+📋 Copy
+</button>
+
+</div>
+
+
+<div class="wish-card">
+
+<h3>🌙 Eid Wishes</h3>
+
+<p>
+Eid Mubarak 🌙✨<br>
+May this Eid bring peace,
+happiness and endless blessings ❤️
+</p>
+
+<button onclick="copyWish(this)">
+📋 Copy
+</button>
+
+</div>
+
+
+<div class="wish-card">
+
+<h3>🎄 Christmas Wishes</h3>
+
+<p>
+Merry Christmas 🎄🎅<br>
+May your days be filled with joy,
+love and beautiful memories ❤️
+</p>
+
+<button onclick="copyWish(this)">
+📋 Copy
+</button>
+
+</div>
+
+
+<div class="wish-card">
+
+<h3>🎆 New Year Wishes</h3>
+
+<p>
+Happy New Year 🎆🥳<br>
+May this year bring success,
+good health and lots of smiles 😊
+</p>
+
+<button onclick="copyWish(this)">
+📋 Copy
+</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- 💍 Wedding Section -->
+
+<section class="birthday-section">
+
+<h2>💍 Wedding Wishes</h2>
+
+<div class="wish-container">
+
+<div class="wish-card">
+
+<h3>💍 Special Wedding Wishes</h3>
+
+<p>
+Beautiful wedding wishes and blessings ❤️<br>
+Click below to open Wedding Collection ✨
+</p>
+
+<a href="wedding.html">
+
+<button>
+💍 Open Wedding
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- 🎁 Gift Box Section -->
+
+<section class="birthday-section">
+
+<h2>🎁 Surprise Gift Box 🎉</h2>
+
+
+<div class="wish-container">
+
+
+<div class="wish-card">
+
+
+<h3>🎁 Open Your Gift</h3>
+
+
+<div class="gift-box" onclick="openGift()">
+
+🎁
+
+</div>
+
+
+<p id="giftMessage">
+Click the gift box ❤️
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+<!-- 💍 Wedding Section -->
+
+<section class="birthday-section">
+
+<div class="wish-container">
+
+<div class="wish-card">
+
+
+
+<!-- 📞 Contact Section -->
+
+<section class="birthday-section" id="contact">
+
+<h2>📞 Contact Me</h2>
+
+
+<div class="wish-container">
+
+
+<div class="wish-card">
+
+
+<h3>📷 Instagram</h3>
+
+
+<p>
+Follow me on Instagram ❤️<br><br>
+<b>@arif_ahmed5_6</b>
+</p>
+
+
+
+<a href="https://www.instagram.com/arif_ahmed5_6"
+target="_blank">
+
+<button>
+📷 Follow Now
+</button>
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- 📷 Instagram -->
+
+<a href="https://www.instagram.com/arif_ahmed5_6"
+target="_blank"
+class="instagram-btn">
+
+📷
+
+</a>
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
